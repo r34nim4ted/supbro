@@ -3,11 +3,11 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       surlybirdindustries.com
+ * @link       http://surlybirdindustries.com
  * @since      1.0.0
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/admin
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/admin
- * @author     Bryan Erwin <bryan@surlybirdindustries.com>
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/admin
+ * @author     Surly Bird Industries <Bryan@surlybirdindustries.com>
  */
-class Sub_Bro_Admin {
+class Sup_Bro_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -65,15 +65,15 @@ class Sub_Bro_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Sub_Bro_Loader as all of the hooks are defined
+		 * defined in Sup_Bro_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Sub_Bro_Loader will then create the relationship
+		 * The Sup_Bro_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/sub-bro-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/sup-bro-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Sub_Bro_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Sub_Bro_Loader as all of the hooks are defined
+		 * defined in Sup_Bro_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Sub_Bro_Loader will then create the relationship
+		 * The Sup_Bro_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sub-bro-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sup-bro-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 

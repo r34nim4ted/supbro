@@ -8,20 +8,20 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              surlybirdindustries.com
+ * @link              http://surlybirdindustries.com
  * @since             1.0.0
- * @package           Sub_Bro
+ * @package           Sup_Bro
  *
  * @wordpress-plugin
- * Plugin Name:       SupBro
+ * Plugin Name:       Sup Bro
  * Plugin URI:        https://github.com/r34nim4ted/supbro
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
- * Author:            Bryan Erwin
- * Author URI:        surlybirdindustries.com
+ * Author:            Surly Bird Industries
+ * Author URI:        http://surlybirdindustries.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       sub-bro
+ * Text Domain:       sup-bro
  * Domain Path:       /languages
  */
 
@@ -39,30 +39,30 @@ define( 'PLUGIN_NAME_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-sub-bro-activator.php
+ * This action is documented in includes/class-sup-bro-activator.php
  */
-function activate_sub_bro() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sub-bro-activator.php';
-	Sub_Bro_Activator::activate();
+function activate_sup_bro() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sup-bro-activator.php';
+	Sup_Bro_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-sub-bro-deactivator.php
+ * This action is documented in includes/class-sup-bro-deactivator.php
  */
-function deactivate_sub_bro() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sub-bro-deactivator.php';
-	Sub_Bro_Deactivator::deactivate();
+function deactivate_sup_bro() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sup-bro-deactivator.php';
+	Sup_Bro_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_sub_bro' );
-register_deactivation_hook( __FILE__, 'deactivate_sub_bro' );
+register_activation_hook( __FILE__, 'activate_sup_bro' );
+register_deactivation_hook( __FILE__, 'deactivate_sup_bro' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-sub-bro.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-sup-bro.php';
 
 /**
  * Begins execution of the plugin.
@@ -73,10 +73,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-sub-bro.php';
  *
  * @since    1.0.0
  */
-function run_sub_bro() {
+function run_sup_bro() {
 
-	$plugin = new Sub_Bro();
+	$plugin = new Sup_Bro();
 	$plugin->run();
 
 }
-run_sub_bro();
+run_sup_bro();

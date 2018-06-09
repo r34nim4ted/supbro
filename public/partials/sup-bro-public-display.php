@@ -5,11 +5,11 @@
  *
  * This file is used to markup the public-facing aspects of the plugin.
  *
- * @link       surlybirdindustries.com
+ * @link       http://surlybirdindustries.com
  * @since      1.0.0
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/public/partials
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/public/partials
  */
 ?>
 

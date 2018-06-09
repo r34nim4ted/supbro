@@ -3,11 +3,11 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       surlybirdindustries.com
+ * @link       http://surlybirdindustries.com
  * @since      1.0.0
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
- * @author     Bryan Erwin <bryan@surlybirdindustries.com>
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
+ * @author     Surly Bird Industries <Bryan@surlybirdindustries.com>
  */
-class Sub_Bro_Loader {
+class Sup_Bro_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

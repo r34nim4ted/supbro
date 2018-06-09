@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       surlybirdindustries.com
+ * @link       http://surlybirdindustries.com
  * @since      1.0.0
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
- * @author     Bryan Erwin <bryan@surlybirdindustries.com>
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
+ * @author     Surly Bird Industries <Bryan@surlybirdindustries.com>
  */
-class Sub_Bro_Activator {
+class Sup_Bro_Activator {
 
 	/**
 	 * Short Description. (use period)

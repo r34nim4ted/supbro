@@ -6,11 +6,11 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       surlybirdindustries.com
+ * @link       http://surlybirdindustries.com
  * @since      1.0.0
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
- * @author     Bryan Erwin <bryan@surlybirdindustries.com>
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
+ * @author     Surly Bird Industries <Bryan@surlybirdindustries.com>
  */
-class Sub_Bro {
+class Sup_Bro {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Sub_Bro {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Sub_Bro_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Sup_Bro_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -72,7 +72,7 @@ class Sub_Bro {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'sub-bro';
+		$this->plugin_name = 'sup-bro';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Sub_Bro {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Sub_Bro_Loader. Orchestrates the hooks of the plugin.
-	 * - Sub_Bro_i18n. Defines internationalization functionality.
-	 * - Sub_Bro_Admin. Defines all hooks for the admin area.
-	 * - Sub_Bro_Public. Defines all hooks for the public side of the site.
+	 * - Sup_Bro_Loader. Orchestrates the hooks of the plugin.
+	 * - Sup_Bro_i18n. Defines internationalization functionality.
+	 * - Sup_Bro_Admin. Defines all hooks for the admin area.
+	 * - Sup_Bro_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,33 +103,33 @@ class Sub_Bro {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sub-bro-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sup-bro-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sub-bro-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-sup-bro-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-sub-bro-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-sup-bro-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-sub-bro-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-sup-bro-public.php';
 
-		$this->loader = new Sub_Bro_Loader();
+		$this->loader = new Sup_Bro_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Sub_Bro_i18n class in order to set the domain and to register the hook
+	 * Uses the Sup_Bro_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Sub_Bro {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Sub_Bro_i18n();
+		$plugin_i18n = new Sup_Bro_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class Sub_Bro {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Sub_Bro_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Sup_Bro_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,7 +168,7 @@ class Sub_Bro {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Sub_Bro_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Sup_Bro_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -199,7 +199,7 @@ class Sub_Bro {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Sub_Bro_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Sup_Bro_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

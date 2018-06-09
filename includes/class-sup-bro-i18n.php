@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       surlybirdindustries.com
+ * @link       http://surlybirdindustries.com
  * @since      1.0.0
  *
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Sub_Bro
- * @subpackage Sub_Bro/includes
- * @author     Bryan Erwin <bryan@surlybirdindustries.com>
+ * @package    Sup_Bro
+ * @subpackage Sup_Bro/includes
+ * @author     Surly Bird Industries <Bryan@surlybirdindustries.com>
  */
-class Sub_Bro_i18n {
+class Sup_Bro_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Sub_Bro_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'sub-bro',
+			'sup-bro',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
