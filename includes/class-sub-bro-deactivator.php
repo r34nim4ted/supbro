@@ -3,11 +3,11 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://example.com
+ * @link       surlybirdindustries.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Sub_Bro
+ * @subpackage Sub_Bro/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    Sub_Bro
+ * @subpackage Sub_Bro/includes
+ * @author     Bryan Erwin <bryan@surlybirdindustries.com>
  */
-class Plugin_Name_Deactivator {
+class Sub_Bro_Deactivator {
 
 	/**
 	 * Short Description. (use period)
